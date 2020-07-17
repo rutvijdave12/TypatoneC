@@ -1,0 +1,339 @@
+html{
+	height: 100%;
+	width:100%;
+}
+
+body{
+	height: 100%;
+	width:100%;
+	background: linear-gradient(90deg, #3a6186 10%, #89253e 90%);
+	background: -webkit-linear-gradient(90deg, #3a6186 10%, #89253e 90%);
+	font-family: "sans-serif";
+
+}
+
+.output .staged{
+	background: none;
+	font-size: 36px;
+    line-height: 10px;
+    color: white;
+    box-shadow: none !important;
+    box-sizing: content-box;
+    width: fit-content;
+    height: fit-content;
+}
+
+.output{
+	flex-grow: 1;
+	width:min-content;
+
+	font-weight: 500;
+    font-size: 36px;
+    line-height: 10px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+    align-items: flex-start;
+
+}
+
+
+.container-fluid,
+.row{
+	height: 100%;
+}
+
+.keyboard-background{
+	background: #efefef;
+	width: 514px;
+}
+
+.keyboard{
+	padding: 180px 12px 30px;
+	height: 100%;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.board{
+	height: 100%;
+	width:100%;
+	box-sizing: border-box;
+	padding-bottom: 10%;
+}
+
+i{
+	color: rgb(255,255,255,0.8);
+}
+
+i:hover{
+	color: rgb(255,255,255,1);
+}
+
+
+span{
+	height:4.125rem;
+	width: 2.875rem;
+	background: white;
+	box-sizing: border-box;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.625rem;
+	box-shadow: 0 1px #d6d6d6;
+	color: #555;
+	
+}
+
+.icon{
+	width:44px;
+}
+
+
+
+span:active{
+	background: rgba(0,0,0,0.5);
+	color: white;
+}
+
+.pressed{
+	background: rgba(0,0,0,0.5);
+	color: white;
+
+}
+
+.special span:hover{
+	background: rgba(0,0,0,0.2);
+}
+
+.special span:first-child:hover,.special span:last-child:hover{
+	background: rgba(0,0,0,0.1);
+}
+
+.first span, .second span, .third span, .fourth span, .special span{
+	margin:auto 1px;
+}
+
+.first, .second, .third, .fourth,{
+	width: 100%;
+}
+
+.special{
+	height: 68px;
+	width: 105%;
+	margin-top: 1px;
+}
+
+.special span{
+	width: 85px !important;
+	background: rgba(0,0,0,0.1);
+}
+
+.num{
+	width:60px;
+}
+
+.space{
+	width:218px;
+}
+
+.return{
+	width:87px;
+}
+
+@media (max-width: 620px) {
+	.outer{
+		display: flex;
+		flex-direction: column-reverse;
+
+	}
+	.keyboard-background{
+		height: 65%;
+		width: 100%;
+		align-self: flex-end;
+	}
+
+	.special{
+	/*background: rgba(0,0,0,0.1);*/
+	height: 68px;
+	width: 120%;
+	}
+
+	.board{
+		padding-bottom: 10px;
+	}
+
+	.keyboard{
+	padding: 0px;
+	height: 100%;
+	}
+
+	.output{
+		width:100%;
+		order:1;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: row;
+		align-items: flex-start;
+
+
+	}
+
+	.output .staged{
+	background: none;
+	font-size: 36px;
+    line-height: 10px;
+    color: white;
+    box-shadow: none !important;
+    box-sizing: content-box;
+    width: fit-content;
+    height: fit-content;
+}
+
+    
+}
+
+@media (max-height: 600px){
+	.keyboard-background{
+		height: 100%;
+		width: 30%;
+		align-self: flex-end;
+	}
+
+	.keyboard{
+		width: 100%;
+	}
+
+	.board{
+		width: 100%;
+		padding-bottom: 20%;
+	}
+
+	.first, .second, .third, .fourth{
+		width: 100%;
+		height: 15%;
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+
+	span{
+	height:2em;
+	width: 8%;
+	background: white;
+	box-sizing: border-box;
+	font-size: 1em;
+/*	margin:2px 0;*/
+	
+	}
+
+	.board{
+		height: 100%;
+		padding-bottom: 20%;
+	}
+
+	.icon{
+	width:8%;
+	}
+
+	.num{
+		font-size: 0.8em;
+		width: 10%;
+	}
+
+	.space{
+		font-size: 0.8em;
+		width:40%;
+	}
+
+	.return{
+		font-size: 0.8em;
+		width: 15%;
+	}
+
+	.special{
+		height: 15%;
+		margin-bottom: 2%;
+	}
+
+	.special span{
+		height: 3em;
+		background: rgba(0,0,0,0.1);
+	}
+
+
+}
+
+
+@media (max-height: 500px){
+	.keyboard-background{
+		height: 500px;
+		width: 20%;
+		align-self: flex-end;
+	}
+
+	.keyboard{
+		width: 100%;
+	}
+
+	.board{
+		width: 100%;
+		padding-bottom: 0;
+	}
+
+	.first, .second, .third, .fourth{
+		width: 100%;
+		height: 15%;
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+
+	span{
+	height:2em;
+	width: 8%;
+	background: white;
+	box-sizing: border-box;
+	font-size: 1em;
+/*	margin:2px 0;*/
+	
+	}
+
+	.board{
+		height: 100%;
+		padding-bottom: 10%;
+	}
+
+	.icon{
+	width:8%;
+	}
+
+	.num{
+		font-size: 0.8em;
+		width: 10%;
+	}
+
+	.space{
+		font-size: 0.8em;
+		width:40%;
+	}
+
+	.return{
+		font-size: 0.8em;
+		width: 15%;
+	}
+
+	.special{
+		height: 15%;
+		margin-bottom: 2%;
+	}
+
+	.special span{
+		height: 3em;
+		background: rgba(0,0,0,0.1);
+	}
+
+
+}
+
+
+
